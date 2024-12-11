@@ -1,0 +1,7 @@
+/* Import fonts first */
+@import '@fontsource/poppins';
+
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

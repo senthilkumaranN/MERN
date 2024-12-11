@@ -1,0 +1,10 @@
+node_modules/
+build/
+.vscode/
+.DS_Store
+
+
+# Environment variables
+.env
+.env.local
+.env.*.local

@@ -1,8 +1,7 @@
 # Node.js dependencies
 node_modules/
 
-# Backend build output
-dist/
+
 
 # Environment variables
 .env

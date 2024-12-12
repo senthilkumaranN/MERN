@@ -57,7 +57,6 @@ const Context = ({ children }) => {
          setloading(true)
          const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/recipe`)
          const data = await response.json();
-         console.log(data.food)
          setrecipe(data.food);
 
 

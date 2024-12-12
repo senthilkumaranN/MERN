@@ -55,7 +55,7 @@ const Context = ({ children }) => {
    const fetchrecipe = async () => {
       try {
          setloading(true)
-         const response = await fetch(`${API_URL}/api/recipe`)
+         const response = await fetch(`${API_URL}/recipe`)
          const data = await response.json();
          console.log(data.food)
          setrecipe(data.food);
@@ -74,7 +74,7 @@ const Context = ({ children }) => {
    const DeleteRecipe = async (id) => {
       try {
          const token = localStorage.getItem('accesstoken');
-         const response = await fetch(`${API_URL}/api/recipe/${id}`, {
+         const response = await fetch(`${API_URL}/recipe/${id}`, {
             method: 'DELETE',
             headers: {
 

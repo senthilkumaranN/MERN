@@ -23,7 +23,7 @@ const UpdateRecipe = () => {
         const token = localStorage.getItem('accesstoken');
         const fetchRecipe = async () => {
             try {
-                const response = await fetch(`${API_URL}/api/Recipe/${id}`, {
+                const response = await fetch(`${API_URL}/Recipe/${id}`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (!response.ok) throw new Error('Failed to fetch recipe data');
@@ -83,7 +83,7 @@ const UpdateRecipe = () => {
             if (updateformdata.image) formData.append('image', updateformdata.image);
 
             const token = localStorage.getItem('accesstoken');
-            const response = await fetch(`${API_URL}/api/updateRecipe/${id}`, {
+            const response = await fetch(`${API_URL}/updateRecipe/${id}`, {
                 method: 'PUT',
                 headers: { Authorization: `Bearer ${token}` },
                 body: formData,

@@ -12,7 +12,7 @@ const Pagination = () => {
 
     const fetchItems= async () =>{
         try{
-           const response = await fetch(`${API_URL}/api/Pagination?page=${currentPage}&limit=4`);
+           const response = await fetch(`${API_URL}/Pagination?page=${currentPage}&limit=4`);
            const data = await response.json()
            setrecipe(data.items);
            settotalPage(data.totalPages);

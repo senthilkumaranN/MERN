@@ -6,13 +6,7 @@ npm-debug.log*
 # Node modules
 node_modules/
 **/node_modules/
-
-# Build output
-build/
-
-public/
-
-
+dist/
 # Environment variables
 .env
 .env.local

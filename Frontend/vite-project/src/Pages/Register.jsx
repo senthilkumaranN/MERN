@@ -10,7 +10,7 @@ const Register = () => {
     const [error, seterror] = useState('')
     const navigate = useNavigate();
 
-    const API_URL = import.meta.env.VITE_API_BASE_URL;
+    
 
 
     const handleinput = (e) => {
@@ -49,7 +49,7 @@ const Register = () => {
 
         if (validateform()) {
             try {
-                const res = await fetch(`${API_URL}/register`, {
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/register`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ name, email, password, role }),

@@ -64,7 +64,7 @@ const CreateRecipe = () => {
     return Object.keys(errors).length === 0;
   };
   
-  const API_URL = import.meta.env.VITE_API_BASE_URL;
+  
 
   
   const handleSubmit = async (e) => {
@@ -81,7 +81,7 @@ const CreateRecipe = () => {
         
         const token = localStorage.getItem('accesstoken');
 
-        const response = await fetch(`${API_URL}/createRecipe`, {
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/createRecipe`, {
           method: 'POST',
           headers: {
             Authorization: `Bearer ${token}`,

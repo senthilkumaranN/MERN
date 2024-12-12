@@ -7,12 +7,12 @@ const Pagination = () => {
     const [currentPage,setcurrentPage] = useState(1)
     const [totalPage,settotalPage] = useState(1)
 
-    const API_URL = import.meta.env.VITE_API_BASE_URL;
+    
 
 
     const fetchItems= async () =>{
         try{
-           const response = await fetch(`${API_URL}/Pagination?page=${currentPage}&limit=4`);
+           const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/Pagination?page=${currentPage}&limit=4`);
            const data = await response.json()
            setrecipe(data.items);
            settotalPage(data.totalPages);

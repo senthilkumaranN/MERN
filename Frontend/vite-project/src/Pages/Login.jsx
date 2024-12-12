@@ -14,7 +14,7 @@ const Login = () => {
    const [validationerror, setvalidationerror] = useState({})
    const navigate = useNavigate();
 
-   const API_URL = import.meta.env.VITE_API_BASE_URL;
+   
 
 
    const handleinput = (e) => {
@@ -44,7 +44,7 @@ const Login = () => {
 
       if (validatelogin()) {
          try {
-            const response = await fetch(`${API_URL}/login`, {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/login`, {
                method: 'POST',
                headers: { 'Content-Type': 'application/json' },
                body: JSON.stringify({ name, password })

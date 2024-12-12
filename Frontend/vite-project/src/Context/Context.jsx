@@ -14,8 +14,8 @@ const Context = ({ children }) => {
    const [error, seterror] = useState("")
    const [favorites,setfavorites] = useState([])
 
-   const API_URL = import.meta.env.VITE_API_BASE_URL
-   console.log(API_URL)
+   
+  
 
 
    useEffect(() => {
@@ -55,7 +55,7 @@ const Context = ({ children }) => {
    const fetchrecipe = async () => {
       try {
          setloading(true)
-         const response = await fetch(`${API_URL}/recipe`)
+         const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/recipe`)
          const data = await response.json();
          console.log(data.food)
          setrecipe(data.food);
@@ -74,7 +74,7 @@ const Context = ({ children }) => {
    const DeleteRecipe = async (id) => {
       try {
          const token = localStorage.getItem('accesstoken');
-         const response = await fetch(`${API_URL}/recipe/${id}`, {
+         const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/recipe/${id}`, {
             method: 'DELETE',
             headers: {
 

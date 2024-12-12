@@ -17,7 +17,7 @@ const Home = () => {
   const navigate = useNavigate()
   const [searchquery, setsearchquery] = useState('')
  
-  const API_URL = import.meta.env.VITE_API_BASE_URL;
+  
 
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
@@ -64,7 +64,7 @@ const Home = () => {
                               <div className="flex justify-center w-full md:w-24 md:mx-auto lg:w-32 xl:w-40">
                                 <img
                                   className="object-cover w-16 h-16 sm:w-22 sm:h-22 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40 object-center rounded-xl shadow-lg transition-transform duration-75 ease-in-out transform hover:scale-110 cursor-pointer"
-                                  src={data?.image ? `${API_URL}/${data?.image}` : '/path/to/default-image.jpg'}
+                                  src={data?.image ? `${import.meta.env.VITE_API_BASE_URL}/${data?.image}` : '/path/to/default-image.jpg'}
                                   alt={data?.title || 'Default Image'}
                                 />
                               </div>

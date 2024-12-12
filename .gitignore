@@ -7,6 +7,7 @@ npm-debug.log*
 node_modules/
 **/node_modules/
 dist/
+vercel.json
 # Environment variables
 .env
 .env.local

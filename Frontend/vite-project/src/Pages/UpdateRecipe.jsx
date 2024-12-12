@@ -90,7 +90,7 @@ const UpdateRecipe = () => {
             });
 
             const data = await response.json();
-            console.log(data)
+            
             if (data && data.updateRecipe) {
                 setrecipe((prevRecipes) =>
                     prevRecipes.map((recipe) =>

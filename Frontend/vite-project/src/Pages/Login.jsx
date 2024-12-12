@@ -50,7 +50,7 @@ const Login = () => {
                body: JSON.stringify({ name, password })
             });
             const data = await response.json()
-            console.log(data)
+            
 
             if (data) {
 
